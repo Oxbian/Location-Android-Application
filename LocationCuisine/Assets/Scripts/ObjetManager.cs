@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
+
 public class ObjetManager : MonoBehaviour
 {
-    public Objet[] ObjectsList;
-    public GameObject Prefab;
-    public Transform Parent;
-    public TextMeshProUGUI locationText;
-    public Image locationImage;
-    public TextMeshProUGUI searchName;
+    public Objet[] ObjectsList; //Liste des objets pour pouvoir les ajouter en graphique
+    public GameObject Prefab; //Prefab de l'objet (partie graphique qu'on instancie à chaque objet de la liste)
+    public Transform Parent; //Le parent où instancié les prefabs
+    public TextMeshProUGUI locationText; //Le texte de description indiquant la position de l'objet selectionnée
+    public Image locationImage; //L'image de description indiquant la position de l'objet selectionnée
+    public TextMeshProUGUI searchName; //L'inputfield pour la recherche par nom d'objet
 
-    // Start is called before the first frame update
+    // Fonction lancée au départ
     void Start()
     {
+        //Instancié les objets dans la partie graphique pour chacun présent dans la liste
         foreach (Objet obj in ObjectsList)
         {
             GameObject go = Instantiate(Prefab,Parent);
@@ -26,10 +29,11 @@ public class ObjetManager : MonoBehaviour
         }
 
     }
-    public void ShowObjList(string sort)
+    public void ShowObjList(string sort) //Fonction pour trier les objets par type
     {
-        DestroyAll();
-        foreach (Objet obj in ObjectsList)
+
+        DestroyAll(); //Détruit tout les objets dans la liste
+        foreach (Objet obj in ObjectsList) //Tri des objets par leur type
         {
             if (sort == "None")
             {
@@ -54,7 +58,9 @@ public class ObjetManager : MonoBehaviour
             }
         }
     }
-    public void SearchObj()
+
+
+    public void SearchObj() //Fonction pour chercher les objets par leur nom
     {
         string searchingName = searchName.text;
         DestroyAll();
@@ -72,7 +78,8 @@ public class ObjetManager : MonoBehaviour
             }
         }
     }
-    public void DestroyAll()
+
+    public void DestroyAll() //Fonction pour détruite les objets de la liste
     {
         GameObject[] Objects = GameObject.FindGameObjectsWithTag("Object");
         foreach (GameObject go in Objects)
