@@ -11,19 +11,21 @@ Quelques images de l'application
 
 - *Menu de base*: 
 
-![Image du menu de base](https://zupimages.net/up/20/47/1m5o.png)
+![Image du menu de base](https://imgur.com/pidYawU.png)
 
 - *Menu lorsqu'un objet est sélectionné*
 
-![Image lorsqu'un objet est sélectionné](https://zupimages.net/up/20/47/ck57.png)
+![Image lorsqu'un objet est sélectionné](https://imgur.com/3KK1H40.png)
+
+- *Menu lorsqu'on ajoute un objet*
+
+![Image lorsqu'on ajoute un objet](https://imgur.com/wHVTSUg.png)
 
 
 Ajout futur possible
 --------------
 
-- *Ajout d'une base de donnée pour permettre l'ajout d'objet plus facilement*
-- *Ajout d'objet directement depuis l'application (base de donnée)*
-- *Ajout d'une fonction de recherche des objets par nom*
+- *Modification de l'ajout d'objet et d'image avec accès à la galerie*
 
 Comment l'utiliser? Et l'installer?
 --------------
